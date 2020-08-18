@@ -18,6 +18,8 @@ assert linkedListOfNumbers instanceof java.util.LinkedList
 def listOfNumbers2 = [24, 900, 42, 50000]
 assert listOfNumbers2[0] == 24
 assert listOfNumbers2[-1] == 50000
+assert listOfNumbers2.getAt(0) == 24
+assert listOfNumbers2.getAt(0..1) == [24, 900]
 
 //MODIFYING ELEMENTS
 listOfNumbers2[0] = 24000
@@ -32,3 +34,12 @@ def listOfLists = [["hi, i'm a list", 3], ["me too", true]]
 assert listOfLists[0][0] == "hi, i'm a list"
 assert listOfLists[1][0] == "me too"
 assert listOfLists[1][1] == true
+
+//REVERSE LISTS
+def listToReverse = [1, 2, 3]
+assert listToReverse.reverse() == [3, 2, 1]
+
+//FINDALL
+assert listToReverse.findAll { it == 1 } == [1]
+
+
